@@ -13,7 +13,7 @@
 
 This is a preliminary milestone to let you set up goals for your final project and assess the feasibility of your ideas.
 
-[PDF is an acceptable submission format](https://edstem.org/eu/courses/94/discussion/29290?comment=52044), thus our milestone \#1 is here: https://github.com/com-480-data-visualization/project-2023-high-dimensional-explorers/milestone1.pdf.
+[PDF is an acceptable submission format](https://edstem.org/eu/courses/94/discussion/29290?comment=52044), thus our milestone \#1 is here: https://github.com/com-480-data-visualization/project-2023-high-dimensional-explorers/blob/master/milestone1.pdf.
 
 ## Milestone 2 (7th May, 5pm)
 
