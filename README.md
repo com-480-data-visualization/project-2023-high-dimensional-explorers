@@ -19,6 +19,28 @@ This is a preliminary milestone to let you set up goals for your final project a
 
 **10% of the final grade**
 
+Our second milestone can be found here: https://github.com/com-480-data-visualization/project-2023-high-dimensional-explorers/blob/master/milestone2.pdf.
+The building blocks of the visualization can be found in the folder `m2_building_blocks`.
+
+It uses Python and the bokeh library, you can find the needed libraries in the file `requirements.txt`. 
+To run the main prototype you can use the following command:
+```shell
+$ bokeh serve bokeh_slider_example.py
+```
+which will create a bokeh server and run simulations on the fly.
+
+The other two components don't need to have a backend server running so you can get the corresponding web pages by running.
+
+```shell
+$ python grid.py
+```
+and 
+
+```shell
+$ python model_description.py
+```
+
+
 
 ## Milestone 3 (4th June, 5pm)
 
