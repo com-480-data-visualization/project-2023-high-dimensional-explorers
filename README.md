@@ -30,6 +30,8 @@ boilerplate is delegated to Bokeh, a tool presented in the
 lecture. This was agreed by the course staff in the conception 
 stage.
 
+Our code can be found in the `code/` folder
+
 Python dependencies are in `requirements.txt`, e.g. 
 `pip3 install -r requirements.txt`.
 
