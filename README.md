@@ -30,7 +30,7 @@ boilerplate is delegated to Bokeh, a tool presented in the
 lecture. This was agreed by the course staff in the conception 
 stage.
 
-Our code can be found in the `code/` folder
+Our code can be found in the `final_codebase/` folder
 
 Python dependencies are in `requirements.txt`, e.g. 
 `pip3 install -r requirements.txt`.
@@ -40,7 +40,7 @@ In order to be able to run it locally you should update the path in
 
 Then you can run the bokeh server with 
 ```bash
-python3 main_app.py paths=<your-path-file> ++usecase=hcas`
+python3 main_app.py paths=<your-path-file> ++usecase=hcas
 ```
 Where the usecase can be chosen between `cartpole` and `hcas`
 
@@ -52,7 +52,7 @@ do `python3 main_app.py +foo=bar.baz` or
 For example you can change the number of points used in the simulation by overriding 
 
 ```bash
-python main_app.py paths=<youe-path-file> ++usecase=hcas viz.num_points=1000` 
+python main_app.py paths=<youe-path-file> ++usecase=hcas viz.num_points=1000
 ```
 In order for the app to do anything interesting, it needs to be
 fed with a pickled PyTorch model (not `state_dict`, for simplicity)
