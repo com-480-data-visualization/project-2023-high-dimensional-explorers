@@ -1,0 +1,7 @@
+nnet: "data-visualization-project/acas/networks"
+training_data: "data-visualization-project/acas/TrainingData"
+qtable: "data-visualization-project/acas/GenerateTable/Qtables"
+logs: "data-visualization-project/logs"
+plots: "data-visualization-project/plots"
+tilde: "/idiap/user/kmatoba"
+cache: "data-visualization-project/cache"

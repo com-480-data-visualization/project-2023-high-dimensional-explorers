@@ -65,6 +65,7 @@ contains most of the features of a realistic workflow.
 We will submit also a trained network on this problem
 to give a self-contained example. 
 
+To train an RL agent to solve the cartpole problem, just run `cartpole/cartpole_policy_gradient_simple.py`. 
 
 [^2] The tornado server that backs Bokeh can occasionally get into a 
 bad state. A good way to hard-reset it is (assuming it was started on 

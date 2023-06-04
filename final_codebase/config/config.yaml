@@ -1,0 +1,97 @@
+defaults:
+  - _self_
+  - paths: default
+
+usecase: null
+
+hcas:
+  rotation_plot_dims: [0, 1]
+  rotation_other_dims: [4, 2, 3]
+
+  pra: 0
+  tau: 0
+  data:
+    min_scaled_psi: -0.50
+    max_scaled_psi: +0.50
+    experiment_ident: "dataviz"
+    training_data_pattern: "{}_pra{:d}_tau{:02}.h5"
+    vints: [100.0, 200.0, 300.0]
+    vowns: [100.0, 200.0, 300.0]
+    n_theta: 21
+    n_psis: 21
+    ranges: [0.0, 25.0, 50.0, 75.0, 100.0, 150.0, 200.0, 300.0,
+            400.0, 500.0, 510.0, 750.0, 1000.0, 1500.0, 2000.0,
+            3000.0, 4000.0, 5000.0, 7000.0, 9000.0, 11000,
+            15000.0, 19000.0, 25000.0, 30000.0, 35000.0, 40000.0,
+            48000.0, 56000.0]
+    input:
+      dim: 5
+      lower: [-0.50, -0.50, -0.50, -0.50, -0.50]
+      upper: [+0.50, +0.50, +0.50, +0.50, +0.50]
+      names: ["x", "y", "psi", "v_own", "v_intruder"]
+
+    output:
+      names: [strong_left,weak_left,straight,weak_right,strong_right]
+      dim: 5
+
+  model:
+    num_relu_layers: 5
+    neurons_per_layer: 25
+    include_bias: true
+    ident_pattern: "pra{:d}_tau{:02d}_relulayers{:03d}_neurons{:03d}"
+
+  train:
+    batch_size: 512
+    lr: 4e-3
+    num_epochs: 3000
+    test_size: 2000
+
+cartpole:
+  rotation_plot_dims: [0, 1]
+  rotation_other_dims: [2, 3]
+  data:
+    env_name: "CartPole-v1"
+    episodes: 1000
+    input:
+      dim: 4
+      lower: [-2.4, -2.75, -0.20943951, -3.75]  # 0.20943951 == 12 * (2 * np.pi) / 360
+      upper: [+2.4, +2.75, +0.20943951, +3.75]
+      names: [x, theta, xdot, thetadot]
+    output:
+      dim: 2
+      names: [left, right]
+
+  model:
+#    num_relu_layers: 2
+#    neurons_per_layer: 20
+    num_relu_layers: 1
+    neurons_per_layer: 16
+    include_bias: true
+    ident_pattern: "cartpole_relulayers{:03d}_neurons{:03d}"
+  training:
+    learning_rate: 0.01
+
+hardware:
+  cuda_wanted: True
+  benchmark: True
+
+prng:
+  # seed: 111
+  seed: 112
+
+torch:
+  anomaly_detection: true
+  deterministic: true
+  dtype: float32
+
+viz:
+  num_points: 500
+  pointset_type: halton
+  num_slider_values: 100
+  # dim_in: 5 set by the data input choice in data/default.yaml
+  palette_name: YlGnBu
+  marker_size: 5
+  streaming_proj_type: lexicographic_perspective  # reorders dims, then does perspective projections all the way down to 3d
+  callback_period_milliseconds: 100
+  proj_type: all_angular
+  page_title: "Neural Network Introspector"

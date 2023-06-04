@@ -1,0 +1,6 @@
+GenerateTable/Qtables/*
+TrainingData/*
+checkpoints/*
+networks/*
+tensorboard/*
+PolicyViz/PolicyPlot.tex

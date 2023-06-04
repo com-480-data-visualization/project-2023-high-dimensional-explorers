@@ -1,0 +1,6 @@
+nnet: "network"
+training_data: "acas/TrainingData"
+qtable: "acas/GenerateTable/Qtables"
+logs: "logs"
+plots: "plots"
+tilde: "/app/"
