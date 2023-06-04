@@ -15,7 +15,7 @@ By Matoba and Pannatier
 [![Hydra](https://img.shields.io/badge/Hydra-%2300B4B6.svg?style=for-the-badge&logo=Hydra&logoColor=white)](https://hydra.cc)
 
 This tool is intended to be run on the user's laptop. Below are the instructions on how to run it locally.
-However, we also provide a hosted version at the following link: [https://high-dimentional-explorers.herokuapp.com/main_app](https://high-dimentional-explorers.herokuapp.com/main_app).
+However, we also provide a hosted version at the following link: [https://high-dimentional-explorers.herokuapp.com/](https://high-dimentional-explorers.herokuapp.com/).
 
 you can see a demo of our tool in the [screencast](screencast.mp4)
 
@@ -124,6 +124,6 @@ $ python model_description.py
 
 More information on the project description but to summarize:
 
-[**Hosted Tool**](https://high-dimentional-explorers.herokuapp.com/main_app) - [**Screencast**](screencast.mp4) -[**Process Book**](process_book.pdf)
+[**Hosted Tool**](https://high-dimentional-explorers.herokuapp.com/) - [**Screencast**](screencast.mp4) -[**Process Book**](process_book.pdf)
 
 
